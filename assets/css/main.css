@@ -7,6 +7,11 @@
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 */
 
+:root {
+    --link-color: #ffffff;         /* normal link color */
+    --link-hover-color: #62e4f8;   /* hover link color (example) */
+}
+
 html, body, div, span, applet, object,
 iframe, h1, h2, h3, h4, h5, h6, p, blockquote,
 pre, a, abbr, acronym, address, big, cite,
@@ -3398,4 +3403,64 @@ input, select, textarea {
 	/* Fallback for older browsers */
 	body {
 		overflow-y: scroll;
+	}
+
+
+
+
+	/* === 2×2 Grid Layout === */
+
+	.grid-2x2 {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 2em;   /* spacing between tiles */
+	}
+
+	/* Two columns on desktop */
+	.grid-2x2 .tile {
+		width: calc(50% - 1em);   /* 2 columns */
+		margin-bottom: -0.5em;
+	}
+
+	/* One column on small screens */
+	@media screen and (max-width: 736px) {
+		.grid-2x2 .tile {
+			width: 100%;
+		}
+	}
+
+	/* === IMAGE FRAME (fixed ratio, doesn't grow) === */
+
+	.grid-2x2 .tile .image-wrapper {
+		width: 100%;
+		padding-top: 75%;              /* 16:10 aspect ratio */
+		position: relative;
+		overflow: hidden;                 /* keeps zoom inside box */
+		border-radius: 1em;             /* optional */
+	}
+
+	/* === IMAGE — zoom internally === */
+
+	.grid-2x2 .tile .image-wrapper img {
+		position: absolute;
+		top: 0; left: 0;
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		transition: transform 0.35s ease;
+	}
+
+	.grid-2x2 .tile:hover .image-wrapper img {
+		transform: scale(1.2);          /* internal zoom */
+	}
+
+	/* Larger title text for grid tiles */
+	.grid-2x2 .tile h3 {
+		font-size: 1.5em;        /* increase size */
+		margin-top: 0.5em;      /* spacing above */
+		margin-bottom: 0.4em;    /* reduces gap below */
+		font-weight: 500;        /* optional: stronger title */
+		text-align: center;
+		text-decoration: none !important;
+		border-bottom: none !important;
 	}
