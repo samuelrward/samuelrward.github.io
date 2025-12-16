@@ -2597,7 +2597,7 @@ input, select, textarea {
 		background-position: top left,							top left;
 		background-repeat: repeat,								no-repeat;
 		background-size: auto,								150%;
-		color: rgba(255, 255, 255, 0.5);
+		color: rgba(255, 255, 255, 0.76);
 		height: 100%;
 		left: 0;
 		padding: 8em 4em;
@@ -3218,4 +3218,69 @@ input, select, textarea {
 				padding-left: 0;
 			}
 
+	}
+
+
+
+
+		/* Navigation Panel (sidebar menu) */
+	#nav {
+		margin-top: 6em;
+		text-align: right;
+	}
+
+	#nav ul {
+		list-style: none;
+		padding: 0;
+		margin: 0;
+	}
+
+	#nav ul li {
+		margin: 0.5em 0;
+	}
+
+
+	/* Base state (normal, not hovered, not active) */
+	#nav ul li a,
+	#nav ul li a:visited,
+	#nav ul li a:active {
+		color: rgba(255,255,255,0.70) !important;   /* muted white */
+		text-decoration: none !important;           /* no underline */
+		border-bottom: none !important;             /* kill Strata underline */
+		display: inline-block;
+		transition: transform 0.20s ease, color 0.20s ease, text-decoration 0.20s ease;
+	}
+
+	/* Hover state */
+	#nav ul li a:hover {
+		color: #ffffff !important;                  /* brighten */
+		transform: translateX(6px);                 /* slide right */
+		text-decoration: underline !important;      /* underline ON hover */
+		/* border-bottom: none !important;             prevent double-line */
+	}
+
+	/* Active (current page) state */
+	#nav ul li a.active {
+		color: #ffffff !important;                  /* bright by default */
+		font-weight: 700;                           /* slight emphasis */
+		text-decoration: none !important;           /* no underline */
+		border-bottom: none !important;             /* keep clean */
+	}
+
+
+	/* Trigger compact layout when window is short */
+	@media screen and (max-height: 800px) {
+		#header .inner h1 {
+			font-size: 1.1em;
+			line-height: 1.4em;
+		}
+
+		.image.avatar img {
+			width: 10rem;
+			height: 10rem;
+		}
+
+		#header {
+			padding: 4em 2em;
+		}
 	}
