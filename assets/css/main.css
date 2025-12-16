@@ -2597,7 +2597,7 @@ input, select, textarea {
 		background-position: top left,							top left;
 		background-repeat: repeat,								no-repeat;
 		background-size: auto,								150%;
-		color: rgba(255, 255, 255, 0.76);
+		color:  rgba(255,255,255,0.60) ;
 		height: 100%;
 		left: 0;
 		padding: 8em 4em;
@@ -2632,7 +2632,7 @@ input, select, textarea {
 		}
 
 		#header h1 {
-			color: rgba(255, 255, 255, 0.5);
+			color: rgba(255, 255, 255, 0.6);
 			font-size: 1.35em;
 			line-height: 1.75em;
 			margin: 0;
@@ -2997,7 +2997,8 @@ input, select, textarea {
 		/* Header */
 
 			#header {
-				padding: 6em 3em 3em 3em;
+				/* padding: 6em 3em 3em 3em;  */
+				padding: 4em 3em 3em 3em; 
 				width: 30%;
 			}
 
@@ -3057,7 +3058,8 @@ input, select, textarea {
 				background-position: top left, center center;
 				background-size: auto,		cover;
 				left: auto;
-				padding: 6em 4em;
+				/* padding: 6em 4em; */
+				padding: 4em 4em;
 				position: relative;
 				text-align: center;
 				top: auto;
@@ -3157,7 +3159,8 @@ input, select, textarea {
 		/* Header */
 
 			#header {
-				padding: 2.25em 1.5em;
+				/* padding: 2.25em 1.5em; */
+				padding: 1.5em 1.5em;
 			}
 
 				#header h1 {
@@ -3201,7 +3204,8 @@ input, select, textarea {
 		/* Header */
 
 			#header {
-				padding: 4.5em 1.5em;
+				/* padding: 4.5em 1.5em; */
+				padding: 3.5em 1.5em;
 			}
 
 				#header h1 br {
@@ -3220,12 +3224,19 @@ input, select, textarea {
 
 	}
 
+	@media screen and (min-width: 737px) {
+	#header .inner {
+		position: relative;
+		top: -2.5rem;   /* adjust */
+	}
+}
+
 
 
 
 		/* Navigation Panel (sidebar menu) */
 	#nav {
-		margin-top: 6em;
+		margin-top: 3em;
 		text-align: right;
 	}
 
@@ -3244,7 +3255,7 @@ input, select, textarea {
 	#nav ul li a,
 	#nav ul li a:visited,
 	#nav ul li a:active {
-		color: rgba(255,255,255,0.70) !important;   /* muted white */
+		color: rgba(255,255,255,0.60) !important;   /* muted white */
 		text-decoration: none !important;           /* no underline */
 		border-bottom: none !important;             /* kill Strata underline */
 		display: inline-block;
@@ -3283,4 +3294,108 @@ input, select, textarea {
 		#header {
 			padding: 4em 2em;
 		}
+	}
+
+
+		@media screen and (min-width: 737px) {
+		#nav ul li a {
+			font-size: 1.35em !important;   /* similar to h1 size */
+		}
+	}
+
+	/* ============================================================
+	Mobile navigation fixes (override Strata mobile styles)
+	============================================================ */
+
+	@media screen and (max-width: 736px) {
+
+		/* Remove bullets */
+		#nav ul {
+			list-style: none !important;
+			padding-left: 0 !important;
+			margin-left: 0 !important;
+		}
+
+		/* Remove mobile link colour + underline */
+		#nav ul li a 
+		#nav ul li a:visited,
+		#nav ul li a:active {
+			color: rgba(255,255,255,0.70) !important;
+			text-decoration: none !important;
+			border-bottom: none !important;
+		}
+
+		/* Hover animation still works on touch (tap highlight) */
+		#nav ul li a:hover {
+			color: #ffffff !important;
+			text-decoration: underline !important;
+			border-bottom: none !important;
+			transform: translateX(6px);
+		}
+
+		/* Active page styling */
+		#nav ul li a.active {
+			color: #ffffff !important;
+			font-weight: 700;
+			text-decoration: none !important;
+			border-bottom: none !important;
+		}
+
+				/* Center the whole sidebar content */
+		#header .inner {
+			text-align: center !important;
+			align-items: center !important;
+		}
+
+		/* Center avatar block */
+		#header .inner .image.avatar {
+			margin-left: auto !important;
+			margin-right: auto !important;
+			left: -3rem !important;              /* remove your desktop left-shift */
+			position: relative;
+		}
+
+		/* Reset avatar size if needed (optional) */
+		#header .inner .image.avatar img {
+			max-width: 50vw;                /* prevents oversized images */
+			height: auto;
+		}
+
+		/* Center name text */
+		#header .inner h1 {
+			text-align: center !important;
+			margin-left: 0 !important;
+		}
+
+		/* Center nav list */
+		#nav ul {
+			text-align: center !important;
+			padding-left: 0 !important;
+			margin-left: 0 !important;
+		}
+
+		#nav ul li {
+			margin: 0.5em 0;
+		}
+
+		#nav ul li a {
+			display: inline-block;
+		}
+	}
+
+
+	/* Simple spacing above footer */
+	#footer {
+		margin-top: 3em;  /* tweak: 2em–4em */
+	}
+
+
+	/* Keep layout from shifting when scrollbar appears/disappears */
+	html {
+		scrollbar-gutter: stable;
+	}
+
+	/* Fallback for older browsers */
+	body {
+		overflow-y: scroll;
 	}
