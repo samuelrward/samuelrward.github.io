@@ -83,9 +83,205 @@
                 </header>
             </section>
 
+            <!-- Career Timeline -->
+            <section id="timeline">
+                <style>
+                    #ct-wrap {
+                        width: 100%;
+                        padding: 0.5em 0 1.5em 0;
+                        box-sizing: border-box;
+                    }
+                    #ct-above {
+                        position: relative;
+                        height: 110px;
+                        width: 100%;
+                    }
+                    .ct-bargroup {
+                        position: absolute;
+                        bottom: 0;
+                        display: flex;
+                        flex-direction: column;
+                        align-items: flex-start;
+                    }
+                    .ct-label {
+                        font-size: 13px;
+                        line-height: 1.5;
+                        margin-bottom: 5px;
+                        white-space: nowrap;
+                        transition: opacity 0.18s;
+                    }
+                    .ct-flag {
+                        font-size: 15px;
+                        display: block;
+                    }
+                    .ct-bar {
+                        width: 100%;
+                        height: 20px;
+                        border-radius: 2px;
+                        transition: opacity 0.18s;
+                    }
+                    .ct-bargroup:hover .ct-label { opacity: 0.5; }
+                    .ct-bargroup:hover .ct-bar   { opacity: 0.65; }
+
+                    #ct-axis {
+                        position: relative;
+                        height: 2px;
+                        background: #aaa;
+                        width: 100%;
+                        overflow: visible;
+                    }
+                    .ct-tick {
+                        position: absolute;
+                        top: 0;
+                        width: 2px;
+                        background: #aaa;
+                        transform: translateX(-50%);
+                    }
+                    .ct-tick.major { height: 8px; }
+                    .ct-tick.minor { height: 5px; }
+
+                    #ct-years {
+                        position: relative;
+                        height: 22px;
+                        width: 100%;
+                        margin-top: 3px;
+                    }
+                    .ct-year-label {
+                        position: absolute;
+                        top: 0;
+                        transform: translateX(-50%);
+                        font-size: 12px;
+                        color: #aaa;
+                    }
+
+                    #ct-below {
+                        position: relative;
+                        height: 80px;
+                        width: 100%;
+                        margin-top: 8px;
+                    }
+                    .ct-qual {
+                        position: absolute;
+                        top: 0;
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        transform: translateX(-50%);
+                        cursor: default;
+                    }
+                    .ct-qual-connector {
+                        width: 2px;
+                        height: 20px;
+                        background-color: #aaa;
+                        transition: background-color 0.18s;
+                    }
+                    .ct-qual-dot {
+                        width: 9px;
+                        height: 9px;
+                        border-radius: 50%;
+                        border: 2px solid #aaa;
+                        background-color: transparent;
+                        box-sizing: border-box;
+                        flex-shrink: 0;
+                        transition: background-color 0.18s, border-color 0.18s;
+                    }
+                    .ct-qual-text {
+                        text-align: center;
+                        font-size: 12px;
+                        line-height: 1.4;
+                        margin-top: 4px;
+                        white-space: nowrap;
+                        color: #aaa;
+                        transition: color 0.18s;
+                    }
+                    .ct-qual:hover .ct-qual-connector { background-color: #f37b12; }
+                    .ct-qual:hover .ct-qual-dot       { background-color: #f37b12; border-color: #f37b12; }
+                    .ct-qual:hover .ct-qual-text      { color: #f37b12; }
+                </style>
+
+                <div id="ct-wrap">
+
+                    <!-- Career bars (range 2019.7–2028.0, span 8.3 years) -->
+                    <div id="ct-above">
+                        <!-- PhD Student, ESO: 2020.5–2023.5 → 9.64%–45.78% -->
+                        <div class="ct-bargroup" style="left: 9.64%; width: 36.14%;">
+                            <div class="ct-label" style="color: #0072BC;">
+                                PhD Student,<br>ESO,<br><span class="ct-flag">🇩🇪</span>
+                            </div>
+                            <div class="ct-bar" style="background-color: #0072BC;"></div>
+                        </div>
+                        <!-- PGR, Newcastle University: 2023.5–2024.5 → 45.78%–57.83% -->
+                        <div class="ct-bargroup" style="left: 45.78%; width: 12.05%;">
+                            <div class="ct-label" style="color: #002147;">
+                                PGR,<br>Newcastle University,<br><span class="ct-flag">🇬🇧</span>
+                            </div>
+                            <div class="ct-bar" style="background-color: #002147;"></div>
+                        </div>
+                        <!-- Flatiron Research Fellow, CCA: 2024.5–2027.5 → 57.83%–93.98% -->
+                        <div class="ct-bargroup" style="left: 57.83%; width: 36.14%;">
+                            <div class="ct-label" style="color: #C0392B;">
+                                Flatiron Research Fellow,<br>CCA,<br><span class="ct-flag">🇺🇸</span>
+                            </div>
+                            <div class="ct-bar" style="background-color: #C0392B;"></div>
+                        </div>
+                    </div>
+
+                    <!-- Axis with ticks -->
+                    <div id="ct-axis">
+                        <!-- Major ticks at whole years -->
+                        <div class="ct-tick major" style="left:  3.61%;"></div> <!-- 2020 -->
+                        <div class="ct-tick major" style="left: 15.66%;"></div> <!-- 2021 -->
+                        <div class="ct-tick major" style="left: 27.71%;"></div> <!-- 2022 -->
+                        <div class="ct-tick major" style="left: 39.76%;"></div> <!-- 2023 -->
+                        <div class="ct-tick major" style="left: 51.81%;"></div> <!-- 2024 -->
+                        <div class="ct-tick major" style="left: 63.86%;"></div> <!-- 2025 -->
+                        <div class="ct-tick major" style="left: 75.90%;"></div> <!-- 2026 -->
+                        <div class="ct-tick major" style="left: 87.95%;"></div> <!-- 2027 -->
+                        <!-- Minor ticks at half years -->
+                        <div class="ct-tick minor" style="left:  9.64%;"></div> <!-- 2020.5 -->
+                        <div class="ct-tick minor" style="left: 21.69%;"></div> <!-- 2021.5 -->
+                        <div class="ct-tick minor" style="left: 33.73%;"></div> <!-- 2022.5 -->
+                        <div class="ct-tick minor" style="left: 45.78%;"></div> <!-- 2023.5 -->
+                        <div class="ct-tick minor" style="left: 57.83%;"></div> <!-- 2024.5 -->
+                        <div class="ct-tick minor" style="left: 69.88%;"></div> <!-- 2025.5 -->
+                        <div class="ct-tick minor" style="left: 81.93%;"></div> <!-- 2026.5 -->
+                        <div class="ct-tick minor" style="left: 93.98%;"></div> <!-- 2027.5 -->
+                    </div>
+
+                    <!-- Year labels -->
+                    <div id="ct-years">
+                        <span class="ct-year-label" style="left:  3.61%;">2020</span>
+                        <span class="ct-year-label" style="left: 15.66%;">2021</span>
+                        <span class="ct-year-label" style="left: 27.71%;">2022</span>
+                        <span class="ct-year-label" style="left: 39.76%;">2023</span>
+                        <span class="ct-year-label" style="left: 51.81%;">2024</span>
+                        <span class="ct-year-label" style="left: 63.86%;">2025</span>
+                        <span class="ct-year-label" style="left: 75.90%;">2026</span>
+                        <span class="ct-year-label" style="left: 87.95%;">2027</span>
+                    </div>
+
+                    <!-- Qualifications below axis -->
+                    <div id="ct-below">
+                        <!-- MPhys, Durham University: 2020.5 → 9.64% -->
+                        <div class="ct-qual" style="left: 9.64%;">
+                            <div class="ct-qual-connector"></div>
+                            <div class="ct-qual-dot"></div>
+                            <div class="ct-qual-text"><em>MPhys</em>,<br>Durham University</div>
+                        </div>
+                        <!-- Dr. rer. nat., LMU Munich: 2024.5 → 57.83% -->
+                        <div class="ct-qual" style="left: 57.83%;">
+                            <div class="ct-qual-connector"></div>
+                            <div class="ct-qual-dot"></div>
+                            <div class="ct-qual-text"><em>Dr. rer. nat.</em>,<br>LMU Munich</div>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+
             <!-- Publications -->
             <section id="publications">
-                <p>A full list of my publications is available via NASA ADS and ORCiD.</p>
+                <p>A full list of my publications is available via NASA ADS and ORCiD:</p>
                 <ul class="actions">
                     <li><a href="https://ui.adsabs.harvard.edu/search/q=orcid%3A0000-0001-5345-0900&sort=date%20desc%2C%20bibcode%20desc&p_=0" target="_blank" class="button primary">NASA ADS</a></li>
                     <li><a href="https://orcid.org/0000-0001-5345-0900" target="_blank" class="button">ORCiD</a></li>
