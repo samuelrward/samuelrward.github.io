@@ -45,7 +45,7 @@ When a page calls for an image that doesn't exist yet:
 | File | Status |
 |------|--------|
 | `index.html` | Complete — treat as reference, edit conservatively |
-| `research.html` | Stub — needs content |
+| `research.html` | Complete, edit conservatively |
 | `cv_publications.html` | Complete, edit conservatively |
 | `outreach.html` | Stub — needs content |
 | `interests.html` | Stub — needs content |
