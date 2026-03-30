@@ -29,6 +29,25 @@
 				background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.5)), url("images/xray_blur.png") !important;
 			}
 
+			/* Citation links */
+			a.cite {
+				color: #f37b12;
+				border-bottom-color: #f37b12;
+			}
+			a.cite:hover {
+				color: #f37b12;
+				border-bottom-color: transparent;
+			}
+
+			/* Research block images */
+			.research-img {
+				width: 100%;
+				object-fit: contain;
+				display: block;
+			}
+			.research-img-gap {
+				margin-bottom: 1.2em;
+			}
 		</style>
 
 	</head>
@@ -59,11 +78,74 @@
 
         <!-- Main -->
         <div id="main">
-            <section id="research">
+
+            <!-- Intro -->
+            <section id="intro">
                 <header class="major">
                     <h2>How do outflows from Active Galactic Nuclei<br /> impact the evolution of galaxies?</h2>
                 </header>
-                <p>Research Content coming soon.</p>
+                <p>Most massive galaxies harbour a supermassive black hole at their centre. For much of their lives these black holes lie dormant, but if fed with enough gas, they can form active galactic nuclei (AGN), releasing a huge amount of energy. This energy can drive powerful outflows back into the galaxy, both in the form of winds and jets. My research asks how these outflows interact with the surrounding gas, and whether they can suppress star formation and quench the galaxy's growth.</p>
+            </section>
+
+            <!-- Block 1: Wind-ISM simulations -->
+            <section id="wind-ism">
+                <h3>Wind-ISM simulations</h3>
+                <div class="row">
+                    <!-- Left column: two images stacked -->
+                    <div class="col-5 col-12-small">
+                        <div class="research-img-gap">
+                            <!-- REVIEW: confirm summary_k12_L45_v10_C.gif is the right ACDC figure here -->
+                            <img src="images/summary_k12_L45_v10_C.gif" alt="ACDC simulation: AGN wind driving multiphase outflows through a clumpy ISM" class="research-img" style="object-fit: contain;" />
+                        </div>
+                        <div>
+                            <!-- REVIEW: confirm xray_w26.png is the X-ray mixing layer figure for Ward et al. 2026 -->
+                            <img src="images/xray_w26.png" alt="X-ray emission from the AGN wind-cloud mixing layer" class="research-img" style="object-fit: contain;" />
+                        </div>
+                    </div>
+                    <!-- Right column: three paragraphs -->
+                    <div class="col-7 col-12-small">
+                        <p>Understanding how AGN-driven winds couple to the ISM in galaxies is key to revealing the impact of outflows on galaxy evolution. However, resolving the small-scale interactions between AGN winds and the interstellar medium (ISM) remains computationally challenging. To study these processes directly, I created the ACDC (AGN in Clumpy DisCs) simulation suite, which combines a manually controlled clumpy ISM structure with an AGN wind model based on <a href="<!-- REVIEW: ADS link needed for Costa et al. 2020 -->" target="_blank" class="cite">Costa et al. (2020)</a>, using the AREPO code (<a href="<!-- REVIEW: ADS link needed for Springel et al. 2010 -->" target="_blank" class="cite">Springel et al. 2010</a>). These simulations revealed how AGN winds launch multiphase outflows whose properties differ significantly from analytic models and simulations with underresolved ISM structure (<a href="<!-- REVIEW: ADS link needed for Ward et al. 2024 -->" target="_blank" class="cite">Ward et al. 2024</a>).</p>
+                        <p>A longstanding problem in the field is how cold clouds survive being accelerated by an AGN wind without being destroyed. Using the ACDC simulations, we find that clouds can survive on timescales exceeding 5 Myr through efficient mixing and radiative cooling at the wind-cloud interface. In <a href="<!-- REVIEW: ADS link needed for Ward et al. 2026 -->" target="_blank" class="cite">Ward et al. (2026)</a>, we investigated the X-ray emission produced by this mixing layer, showing it to be a potentially important contributor to the soft, extended X-ray excess observed in nearby quasars.</p>
+                        <p>This work has since been extended in two directions: Ivan Almeida (MPIA, Heidelberg) developed an enhanced refinement scheme for the cold outflowing clouds, showing that higher-luminosity AGN drive denser cold outflowing clouds with important implications for how outflow properties are inferred observationally (<a href="<!-- REVIEW: ADS link needed for Almeida et al. 2026 -->" target="_blank" class="cite">Almeida et al. 2026</a>). PhD student Houda Haidar (Newcastle University) is incorporating a dust sputtering destruction model to study dusty outflows (Haidar et al., in prep.).</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Block 2: Mock radio observations -->
+            <section id="radio">
+                <h3>Mock radio observations</h3>
+                <!-- Row 1: centred summary figure -->
+                <div style="text-align: center; margin-bottom: 1.5em;">
+                    <div style="display: inline-block; width: 70%; max-width: 100%;">
+                        <!-- REVIEW: confirm summary_v1.png is the SANGRiA/FLASH summary figure -->
+                        <img src="images/summary_v1.png" alt="SANGRiA summary: HI absorption forward modelling for ASKAP-FLASH" class="research-img" style="object-fit: contain;" />
+                    </div>
+                </div>
+                <!-- Row 2: text left, logo right -->
+                <div class="row">
+                    <div class="col-8 col-12-small">
+                        <p>Radio observations offer a unique window into AGN feedback — from high-energy non-thermal emission to 21cm spectra of neutral hydrogen. Working with CCA predoctoral researcher Emily Kerrison (University of Sydney), I developed SANGRiA (Simulating Absorption of Neutral Gas for Radio Astronomy), a forward-modelling pipeline for 21cm HI absorption. SANGRiA takes galaxies from the SIMBA cosmological simulation, adds jet models, and uses these as backlights for HI absorption radiative transfer. In <a href="<!-- REVIEW: ADS link needed for Kerrison et al. 2026 -->" target="_blank" class="cite">Kerrison et al. (2026, submitted to ApJ)</a>, we apply this to the ASKAP-FLASH survey to investigate the overrepresentation of compact radio sources in their HI-detected sample. A forthcoming companion paper (Ward, Kerrison &amp; Tonnesen) will present the full SANGRiA framework and demonstrate its applicability across current and future radio telescopes including MeerKAT, the SKA, and the DSA.</p>
+                    </div>
+                    <div class="col-4 col-12-small" style="display: flex; align-items: center;">
+                        <img src="images/SANGRiA Logo Color.svg" alt="SANGRiA logo" style="width: 100%; max-width: 180px; object-fit: contain; display: block; margin: 0 auto;" />
+                    </div>
+                </div>
+            </section>
+
+            <!-- Block 3: Cosmological simulations -->
+            <section id="cosmo">
+                <h3>Cosmological simulations</h3>
+                <div class="row">
+                    <!-- Left: vertical aspect figure -->
+                    <div class="col-4 col-12-small">
+                        <!-- REVIEW: confirm cosmo_sim.png is the right figure for Ward et al. 2022 -->
+                        <img src="images/cosmo_sim.png" alt="AGN host galaxy properties in cosmological simulations (Ward et al. 2022)" class="research-img" style="object-fit: contain;" />
+                    </div>
+                    <!-- Right: one paragraph -->
+                    <div class="col-8 col-12-small">
+                        <p>Cosmological simulations such as IllustrisTNG, EAGLE, and SIMBA require AGN feedback to reproduce observed galaxy properties, including stellar mass functions. However, observational studies consistently find AGN preferentially in gas-rich, star-forming galaxies, leading some to question whether AGN feedback is truly effective. In <a href="<!-- REVIEW: ADS link needed for Ward et al. 2022 -->" target="_blank" class="cite">Ward et al. (2022)</a>, we analysed these simulations using the same techniques applied to observational samples, finding that simulations also predict AGN to inhabit gas-rich, star-forming hosts despite employing effective feedback models. This demonstrates that the absence of population-level evidence for feedback cannot be used to rule out AGN-driven quenching. This simulation analysis was subsequently incorporated into observational studies of AGN host galaxies by <a href="<!-- REVIEW: ADS link needed for Bertola et al. 2024 -->" target="_blank" class="cite">Bertola et al. (2024)</a> and <a href="<!-- REVIEW: ADS link needed for Frias Castillo et al. 2024 -->" target="_blank" class="cite">Frias Castillo et al. (2024)</a>.</p>
+                    </div>
+                </div>
             </section>
 
             <!-- Contact -->
