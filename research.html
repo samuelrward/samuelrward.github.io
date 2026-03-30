@@ -95,23 +95,32 @@
             <!-- Block 1: Wind-ISM simulations -->
             <section id="wind-ism">
                 <h3>Wind-ISM simulations</h3>
-                <div class="row">
-                    <!-- Left column: two images stacked -->
-                    <div class="col-5 col-12-small">
-                        <div class="research-img-gap">
-                            <!-- REVIEW: confirm summary_k12_L45_v10_C.gif is the right ACDC figure here -->
-                            <img src="images/summary_k12_L45_v10_C.gif" alt="ACDC simulation: AGN wind driving multiphase outflows through a clumpy ISM" class="research-img" style="object-fit: contain;" />
-                        </div>
-                        <div>
-                            <!-- REVIEW: confirm xray_w26.png is the X-ray mixing layer figure for Ward et al. 2026 -->
-                            <img src="images/xray_w26.png" alt="X-ray emission from the AGN wind-cloud mixing layer" class="research-img" style="object-fit: contain;" />
+
+                <!-- Row 1: first figure (enlarged) left, paragraph 1 right -->
+                <div class="row" style="align-items: flex-start;">
+                    <div class="col-7 col-12-small">
+                        <!-- REVIEW: confirm summary_k12_L45_v10_C.gif is the right ACDC figure here -->
+                        <!-- Crop top 7%: image is square so margin-top:-7% equals 7% of its own height -->
+                        <div style="overflow: hidden;">
+                            <img src="images/summary_k12_L45_v10_C.gif" alt="ACDC simulation: AGN wind driving multiphase outflows through a clumpy ISM" style="width: 100%; display: block; margin-top: -7%;" />
                         </div>
                     </div>
-                    <!-- Right column: three paragraphs -->
-                    <div class="col-7 col-12-small">
+                    <div class="col-5 col-12-small">
                         <p>Understanding how AGN-driven winds couple to the ISM in galaxies is key to revealing the impact of outflows on galaxy evolution. However, resolving the small-scale interactions between AGN winds and the interstellar medium (ISM) remains computationally challenging. To study these processes directly, I created the ACDC (AGN in Clumpy DisCs) simulation suite, which combines a manually controlled clumpy ISM structure with an AGN wind model based on <a href="https://ui.adsabs.harvard.edu/abs/arXiv:2006.05997/abstract" target="_blank" class="cite">Costa et al. (2020)</a>, using the AREPO code (<a href="https://ui.adsabs.harvard.edu/abs/2010MNRAS.401..791S/abstract" target="_blank" class="cite">Springel et al. 2010</a>). These simulations revealed how AGN winds launch multiphase outflows whose properties differ significantly from analytic models and simulations with underresolved ISM structure (<a href="https://ui.adsabs.harvard.edu/abs/arXiv:2407.17593/abstract" target="_blank" class="cite">Ward et al. 2024</a>).</p>
-                        <p>A longstanding problem in the field is how cold clouds survive being accelerated by an AGN wind without being destroyed. Using the ACDC simulations, we find that clouds can survive on timescales exceeding 5 Myr through efficient mixing and radiative cooling at the wind-cloud interface. In <a href="https://ui.adsabs.harvard.edu/abs/arXiv:2511.14834/abstract" target="_blank" class="cite">Ward et al. (2026)</a>, we investigated the X-ray emission produced by this mixing layer, showing it to be a potentially important contributor to the soft, extended X-ray excess observed in nearby quasars.</p>
-                        <p>This work has since been extended in two directions: Ivan Almeida (MPIA, Heidelberg) developed an enhanced refinement scheme for the cold outflowing clouds, showing that higher-luminosity AGN drive denser cold outflowing clouds with important implications for how outflow properties are inferred observationally (<a href="https://ui.adsabs.harvard.edu/abs/arXiv:2602.05954/abstract" target="_blank" class="cite">Almeida et al. 2026</a>). PhD student Houda Haidar (Newcastle University) is incorporating a dust sputtering destruction model to study dusty outflows (Haidar et al., in prep.).</p>
+                    </div>
+                </div>
+
+                <!-- Row 2: full-width paragraphs 2 & 3 -->
+                <div style="margin-top: 1.5em;">
+                    <p>A longstanding problem in the field is how cold clouds survive being accelerated by an AGN wind without being destroyed. Using the ACDC simulations, we find that clouds can survive on timescales exceeding 5 Myr through efficient mixing and radiative cooling at the wind-cloud interface. In <a href="https://ui.adsabs.harvard.edu/abs/arXiv:2511.14834/abstract" target="_blank" class="cite">Ward et al. (2026)</a>, we investigated the X-ray emission produced by this mixing layer, showing it to be a potentially important contributor to the soft, extended X-ray excess observed in nearby quasars.</p>
+                    <p>This work has since been extended in two directions: Ivan Almeida (MPIA, Heidelberg) developed an enhanced refinement scheme for the cold outflowing clouds, showing that higher-luminosity AGN drive denser cold outflowing clouds with important implications for how outflow properties are inferred observationally (<a href="https://ui.adsabs.harvard.edu/abs/arXiv:2602.05954/abstract" target="_blank" class="cite">Almeida et al. 2026</a>). PhD student Houda Haidar (Newcastle University) is incorporating a dust sputtering destruction model to study dusty outflows (Haidar et al., in prep.).</p>
+                </div>
+
+                <!-- Row 3: second figure, ~83% width (twice original col-5), centred -->
+                <div style="text-align: center; margin-top: 1.5em;">
+                    <div style="display: inline-block; width: 83%; max-width: 100%;">
+                        <!-- REVIEW: confirm xray_w26.png is the X-ray mixing layer figure for Ward et al. 2026 -->
+                        <img src="images/xray_w26.png" alt="X-ray emission from the AGN wind-cloud mixing layer" style="width: 100%; display: block; object-fit: contain;" />
                     </div>
                 </div>
             </section>
