@@ -46,6 +46,6 @@ When a page calls for an image that doesn't exist yet:
 |------|--------|
 | `index.html` | Complete — treat as reference, edit conservatively |
 | `research.html` | Stub — needs content |
-| `cv_publications.html` | Stub — needs content |
+| `cv_publications.html` | Complete, edit conservatively |
 | `outreach.html` | Stub — needs content |
 | `interests.html` | Stub — needs content |
