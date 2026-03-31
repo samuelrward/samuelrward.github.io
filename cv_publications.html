@@ -51,6 +51,20 @@
 			border-color: #f37b12;
 			color: #f37b12 !important;
 		}
+
+		.sidebar-credit {
+			position: absolute;
+			bottom: 2em;
+			right: 4em;
+			left: 4em;
+			text-align: right;
+			font-size: 0.65em;
+			color: rgba(255, 255, 255, 0.45);
+			line-height: 1.4;
+		}
+		@media screen and (max-width: 1280px) {
+			.sidebar-credit { display: none; }
+		}
 	</style>
 
 	</head>
@@ -76,6 +90,7 @@
                     </ul>
                 </nav>
             </div>
+            <p class="sidebar-credit"><!-- REVIEW: add image credit text --></p>
         </header>
 
 
