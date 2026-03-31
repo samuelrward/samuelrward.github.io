@@ -65,6 +65,45 @@
 		@media screen and (max-width: 1280px) {
 			.sidebar-credit { display: none; }
 		}
+
+		/* Thesis button: own row on small mobile */
+		@media screen and (max-width: 480px) {
+			#publications .actions {
+				flex-wrap: wrap;
+			}
+			#publications .actions li:last-child {
+				flex-basis: 100%;
+				padding-left: 0;
+				margin-top: 0.5em;
+			}
+		}
+
+		/* Timeline: horizontal scroll on mobile, with note */
+		.ct-mobile-note {
+			display: none;
+			font-size: 0.82em;
+			color: #aaa;
+			text-align: center;
+			margin-top: 0.5em;
+		}
+		@media screen and (max-width: 600px) {
+			#ct-wrap {
+				overflow-x: auto;
+				-webkit-overflow-scrolling: touch;
+			}
+			#ct-above, #ct-axis, #ct-years, #ct-below {
+				min-width: 560px;
+			}
+			.ct-mobile-note { display: block; }
+		}
+
+		/* PDF iframe: full width on mobile */
+		@media screen and (max-width: 736px) {
+			#cv iframe {
+				width: 100% !important;
+				height: 500px;
+			}
+		}
 	</style>
 
 	</head>
@@ -301,6 +340,7 @@
                     </div>
 
                 </div>
+                <p class="ct-mobile-note">Best viewed on desktop</p>
             </section>
 
             <!-- CV -->
