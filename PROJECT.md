@@ -1,109 +1,63 @@
-# PROJECT.md — Personal Interests page
+# PROJECT.md — Responsive stress test
 
 ## Goal
-Build out `interests.html` from its current stub into a complete, styled page consistent with the rest of the site.
+Check all pages render correctly across common screen widths and fix any layout issues found. Make the image credit text stick to the bottom of the sidebar on all pages.
 
 ## General rules
-- Match header, nav, footer and contact block structure of `index.html` exactly
-- Use existing Strata template CSS classes throughout — do not add custom CSS unless strictly necessary
-- All external links open in a new tab (`target="_blank"`)
-- All links use the site's standard orange accent colour — check `assets/css/main.css` for the hex value
-- Accessible but professional tone (see CLAUDE.md)
-- Inline `<!-- REVIEW: ... -->` comments for anything uncertain
+- Do not edit `assets/css/main.css` — use inline `<style>` blocks or inline styles to apply fixes
+- Do not edit images
+- Commit all fixes in a single commit with message: `Responsive fixes and sidebar credit pin`
+- Do not push
 
 ---
 
-## Page structure
+## Task 1 — Pin sidebar image credit to bottom
 
-Sections alternate image left/right with dividers between them. Order: Volleyball, Choir, Hiking, Reading.
-
----
-
-### Block 1 — Volleyball
-
-**Section heading:** Volleyball
-
-**Layout:** Two columns — image left (~38% width), text right. Image may be cropped to fit. Caption below image.
-
-- Left: `PLACEHOLDER: images/interests_volleyball.jpg` with caption `<!-- REVIEW: add caption text -->`
-
-**Text:**
-
-> I enjoy playing a range of team sports - including rugby and rowing earlier in life - and now mostly focus on volleyball. While at ESO, I helped organise the institute volleyball team, coaching weekly training sessions and captaining the side in tournaments against other research institutes at the Atomiade Summer Games in [Grenoble (2022)](https://www.asceri.eu/events/88-summer-atomiade-2022) and [Berlin (2023)](https://www.asceri.eu/events/86-mini-atomiade-2023). These days I spend my Tuesday evenings playing in a co-ed recreational league in New York City - we recently won a Santa-themed tournament.
+On all pages, the image credit text in the sidebar should be pinned to the bottom of the sidebar regardless of content length. Apply a minimal inline `<style>` block override to each page to achieve this without touching `assets/css/main.css`.
 
 ---
 
-### Block 2 — Choral singing
+## Task 2 — Responsive layout fixes
 
-**Section heading:** Choral singing
+Test each page at the following widths and fix any issues found:
+- Mobile: 375px
+- Tablet: 768px  
+- Desktop: 1280px+
 
-**Layout:** Two columns — text left, image right (~38% width). Image may be cropped to fit. Caption below image.
+### Known issue to fix
+**CV & Publications page:** The thesis download button can extend beyond the right edge on mobile. If it overflows, move it to its own row below the other buttons.
 
-- Right: `PLACEHOLDER: images/interests_choir.jpg` with caption `<!-- REVIEW: add caption text -->`
+### Things to check on every page
+- Nav links — no overlap or overflow
+- Two-column image + text layouts — should stack vertically on mobile (image above text)
+- Text — no horizontal overflow or clipping
+- No unintended horizontal scrolling at any width
 
-**Text:**
+### Page-specific things to check
+- **CV & Publications:** Timeline — this is the most complex element. On mobile, if the timeline becomes unreadably small, add a short note beneath it (e.g. "Best viewed on desktop") rather than attempting a full mobile reflow of the timeline
+- **CV & Publications:** PDF iframe — should scale to full width on mobile
+- **Research:** Two-column image + text blocks — stack on mobile
+- **Research:** SANGRiA summary figure (centred, 70% width) — should scale down gracefully
+- **Outreach & Community:** Two-column blocks — stack on mobile
+- **Personal Interests:** Book carousel — 4 columns is too many for mobile; reduce to 2 columns on screens below 600px
+- **Personal Interests:** Lightbox overlay — should work correctly on mobile tap
 
-> Having sung as a choral scholar at St John's College Chapel Choir, Durham, music has remained a constant alongside my research. During my PhD I co-founded and co-directed a choir at ESO, bringing together members of all singing abilities. Our inaugural concert featured music as varied as music from Lord of the Rings, a Purcell opera movement, and a traditional South African folk song. Since moving to New York, I sing bass with the [Greenwich Village Chamber Singers](https://gvcsnyc.org/), with whom I recently performed in a sold-out concert of Bach's St Matthew Passion.
-
----
-
-### Block 3 — Hiking
-
-**Section heading:** Hiking
-
-**Layout:** Two columns — image left (~38% width), text right. Image may be cropped to fit. Caption below image.
-
-- Left: `PLACEHOLDER: images/interests_hiking.jpg` with caption `<!-- REVIEW: add caption text -->`
-
-**Text:**
-
-> After a long week of science, there's nothing better than a fresh lungful of air in the mountains. When I lived in Munich, I frequently organised "beginner-achievable" hiking trips for the other students (enjoyable even when they tipped into [Type II fun](https://weareexplorers.co/type-2-fun-guide-fun-scale/)!) Now I'm in New York, I can hop on a train up the Hudson Valley to hike in the Catskills or visit cute upstate towns (where I tried Root Beer for the first time!).
-
----
-
-### Block 4 — Reading
-
-**Section heading:** Reading
-
-**Layout:** Text full width, then book carousel below at ~90% page width, centred.
-
-**Text:**
-
-> I enjoy reading, and have spent the last few years participating in a reading challenge with friends, aiming to read 15 books a year across a wide range of genres and authors. My favourites tend to cluster around science fiction, historical fiction, and non-fiction history and politics, although I've enjoyed exploring new genres I hadn't read before. I'm always open to new book recommendations!
-
-**Carousel spec:**
-- Display 8 book covers at a time in a 2-row grid of 4 columns, advancing 8 books at a time
-- Book images live in `images/books/` named `book_1.jpg`, `book_2.jpg` etc. — display in ascending numerical order
-- Use 8 placeholder slots if the actual images are not yet present: `PLACEHOLDER: images/books/book_1.jpg` through `PLACEHOLDER: images/books/book_8.jpg`
-- All covers cropped to a consistent vertical 4:3 aspect ratio (`object-fit: cover`) so they align uniformly — most source images are already 4:3 but crop as needed
-- Book title as a caption beneath each cover, `<!-- REVIEW: add book title -->`
-- Left and right arrow buttons on the edges to advance/retreat one book at a time
-- Arrows should wrap around (last book cycles back to first)
-- No autoplay — user-controlled only
-- On hover: book cover scales up slightly (e.g. `transform: scale(1.05)`) with a smooth transition, consistent with the zoom effect used on image links on the homepage
-- On click: book cover opens in a lightbox-style overlay — a darkened background with the image displayed larger and centred. Clicking anywhere outside the image or on a close button dismisses the overlay
-- Carousel and lightbox implemented in vanilla JS, no external libraries
+### Fix approach
+- Use CSS media queries in an inline `<style>` block on each page where fixes are needed
+- Prefer `flex-direction: column` for stacking two-column layouts on mobile
+- Keep fixes minimal — do not restructure pages, only adjust layout behaviour
 
 ---
 
-## Files to create / modify
-| File | Action |
-|------|--------|
-| `interests.html` | Replace stub content with sections above |
-| `images/` | Do not add — use clearly labelled SVG placeholders per CLAUDE.md |
-
-## Do not touch
-- `index.html`
-- `cv_publications.html`
-- `research.html`
-- `outreach.html`
-- `assets/`
+## Files to modify
+All `.html` files in the repo root as needed. Do not modify `assets/`.
 
 ## Definition of done
-- Page renders correctly when opened locally in a browser
-- Carousel navigates correctly with arrow buttons, wraps around, no autoplay
-- All placeholders clearly labelled with correct filenames
-- All links open in a new tab and use the site's orange accent colour
-- Header/nav/footer/contact block matches the rest of the site
-- Changes staged and committed with message: `Build out Personal Interests page`
-- Do not push 
+- All pages checked at 375px, 768px, and 1280px
+- Known thesis button overflow fixed
+- Sidebar credit pinned to bottom on all pages
+- No horizontal scrolling on any page at any tested width
+- Timeline has a "best viewed on desktop" note if unreadable at 375px
+- Book carousel shows 2 columns on mobile
+- Changes staged and committed
+- Do not push
