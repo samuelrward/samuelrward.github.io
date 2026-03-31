@@ -197,11 +197,13 @@
                     var offset = 0;
                     var total = books.length;
                     var track = document.getElementById('carousel-track');
+                    var btnPrev = document.getElementById('carousel-prev');
+                    var btnNext = document.getElementById('carousel-next');
 
                     function render() {
                         track.innerHTML = '';
-                        for (var i = 0; i < VISIBLE; i++) {
-                            var src = books[(offset + i) % total];
+                        var slice = books.slice(offset, offset + VISIBLE);
+                        slice.forEach(function(src) {
                             var wrap = document.createElement('div');
                             wrap.className = 'book-cover-wrap';
                             var img = document.createElement('img');
@@ -212,15 +214,19 @@
                                 return function() { openLightbox(s); };
                             })(src));
                             track.appendChild(wrap);
-                        }
+                        });
+                        btnPrev.style.opacity = offset === 0 ? '0.2' : '1';
+                        btnPrev.disabled = offset === 0;
+                        btnNext.style.opacity = offset + VISIBLE >= total ? '0.2' : '1';
+                        btnNext.disabled = offset + VISIBLE >= total;
                     }
 
-                    document.getElementById('carousel-prev').addEventListener('click', function() {
-                        offset = (offset - 1 + total) % total;
+                    btnPrev.addEventListener('click', function() {
+                        offset = Math.max(0, offset - 1);
                         render();
                     });
-                    document.getElementById('carousel-next').addEventListener('click', function() {
-                        offset = (offset + 1) % total;
+                    btnNext.addEventListener('click', function() {
+                        offset = Math.min(total - VISIBLE, offset + 1);
                         render();
                     });
 
