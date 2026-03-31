@@ -220,11 +220,11 @@
                     }
 
                     btnPrev.addEventListener('click', function() {
-                        offset = Math.max(0, offset - 1);
+                        offset = Math.max(0, offset - VISIBLE);
                         render();
                     });
                     btnNext.addEventListener('click', function() {
-                        offset = Math.min(total - VISIBLE, offset + 1);
+                        offset = Math.min(total - VISIBLE, offset + VISIBLE);
                         render();
                     });
 
