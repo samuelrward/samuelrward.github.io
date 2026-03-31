@@ -1,13 +1,13 @@
-# PROJECT.md — Outreach & Community page
+# PROJECT.md — Personal Interests page
 
 ## Goal
-Build out `outreach.html` from its current stub into a complete, styled page consistent with the rest of the site.
+Build out `interests.html` from its current stub into a complete, styled page consistent with the rest of the site.
 
 ## General rules
 - Match header, nav, footer and contact block structure of `index.html` exactly
 - Use existing Strata template CSS classes throughout — do not add custom CSS unless strictly necessary
-- All links use the site's standard orange accent colour — check `assets/css/main.css` for the hex value
 - All external links open in a new tab (`target="_blank"`)
+- All links use the site's standard orange accent colour — check `assets/css/main.css` for the hex value
 - Accessible but professional tone (see CLAUDE.md)
 - Inline `<!-- REVIEW: ... -->` comments for anything uncertain
 
@@ -15,84 +15,95 @@ Build out `outreach.html` from its current stub into a complete, styled page con
 
 ## Page structure
 
-### Block 1 — Public engagement
-
-**Section heading:** Public engagement
-
-**Layout:** Two columns — image left (~38% width), text right. Image may be cropped/zoomed to fit. Caption below image.
-
-- Left: `PLACEHOLDER: images/outreach_talks.jpg` with caption `<!-- REVIEW: add caption text -->`
-- Right: text block (three paragraphs, see below)
-
-**Text:**
-
-Paragraph 1:
-> A huge advantage we have as astronomers is that so many people - of all ages and from all walks of life - are interested in the universe and the work we do studying it. I enjoy sharing my work through public outreach talks, including at Pint of Science Munich (2023), Newcastle University's <a href="https://www.youtube.com/watch?v=4DADgIvBPHo&list=PLMaRMFMkiHN6Oleg8ls2EN8DdV5fzdnuG&index=4">INSIGHTS public lecture series</a> (2023), and the Royal Observatory Greenwich <a href="https://www.youtube.com/watch?v=9_VtBM9xtmY">Think Space online lecture series</a> (2025), where my talk <em>An Extragalactic Murder Mystery: Do Black Holes Kill Galaxies?</em> is available to watch.
-
-Paragraph 2:
-> I was part of the team behind <a href="https://www.spaceinvestigators.com/">Space Investigators North East</a>, a special exhibit at the Great North Museum: Hancock in Newcastle. I directed and edited a <a href="https://www.spaceinvestigators.com/astronomer-interviews">film</a> of interviews with researchers from Newcastle, Northumbria, and Durham - situated within a life-size model of the JWST mirror - celebrating the breadth of astrophysical research in the North East and the diverse backgrounds of the scientists behind it.
-
-Paragraph 3:
-> As part of the Simons Foundation's Open Interval program, which fosters collaborations between scientists and artists, I have been paired with choreographer <a href="https://www.jieminyang.art/">Jiemin Yang</a> to explore the intersections between contemporary dance and my research into AGN feedback. This ongoing collaboration is developing new ways to communicate complex astrophysical ideas through movement.
+Sections alternate image left/right with dividers between them. Order: Volleyball, Choir, Hiking, Reading.
 
 ---
 
-### Block 2 — Teaching & mentoring
+### Block 1 — Volleyball
 
-**Section heading:** Teaching & mentoring
+**Section heading:** Volleyball
 
-**Layout:** Two columns — text left, image right (~38% width). Image may be cropped/zoomed to fit. Caption below image.
+**Layout:** Two columns — image left (~38% width), text right. Image may be cropped to fit. Caption below image.
 
-- Right: `PLACEHOLDER: images/outreach_teaching.jpg` with caption `<!-- REVIEW: add caption text -->`
-- Left: text block (three paragraphs, see below)
+- Left: `PLACEHOLDER: images/interests_volleyball.jpg` with caption `<!-- REVIEW: add caption text -->`
 
 **Text:**
 
-Paragraph 1:
-> I was lead supervisor for Emily Kerrison (University of Sydney) during her time on the CCA <a href="https://www.simonsfoundation.org/flatiron-institute-center-for-computational-astrophysics-pre-doctoral-program/">predoctoral program</a>, where we designed and built the SANGRiA pipeline to connect her existing expertise in ASKAP-FLASH observations with cosmological simulations. Mentoring Emily through her first simulation-based project was one of the highlights of my fellowship so far.
-
-Paragraph 2:
-> I have given guest lectures at Borough of Manhattan Community College (BMCC) for their introductory astronomy course, and an online lecture at Meru University of Science and Technology, Kenya.
-
-Paragraph 3:
-> I supervised a middle school student on a work experience placement, designing a week-long program that went from calculating foam dart trajectories to programming a simple Solar System model in Python. You can find the notebooks on <a href="https://github.com/samuelrward/SolarSystem">GitHub</a>.
+> I enjoy playing a range of team sports - including rugby and rowing earlier in life - and now mostly focus on volleyball. While at ESO, I helped organise the institute volleyball team, coaching weekly training sessions and captaining the side in tournaments against other research institutes at the Atomiade Summer Games in [Grenoble (2022)](https://www.asceri.eu/events/88-summer-atomiade-2022) and [Berlin (2023)](https://www.asceri.eu/events/86-mini-atomiade-2023). These days I spend my Tuesday evenings playing in a co-ed recreational league in New York City - we recently won a Santa-themed tournament.
 
 ---
 
-### Block 3 — Community & service
+### Block 2 — Choral singing
 
-**Section heading:** Community & service
+**Section heading:** Choral singing
 
-**Layout:** Text full width, then workshop image centred below at 70% page width, `object-fit: contain` (no cropping), caption below image.
+**Layout:** Two columns — text left, image right (~38% width). Image may be cropped to fit. Caption below image.
 
-- Image: `PLACEHOLDER: images/outreach_workshop.jpg` with caption `<!-- REVIEW: add caption text -->`
+- Right: `PLACEHOLDER: images/interests_choir.jpg` with caption `<!-- REVIEW: add caption text -->`
 
 **Text:**
 
-Paragraph 1:
-> As part of the CCA's Baryon Cycle strategic focus, I chaired the Scientific Organising Committee for the <a href="https://www.simonsfoundation.org/event/agn-energy-flows-workshop/">AGN & Energy Flows workshop</a> (February 2026). This brought together over 50 observers and theorists across a range of spatial scales to build a more unified picture of how energy from AGN impacts galaxies and their surroundings.
+> Having sung as a choral scholar at St John's College Chapel Choir, Durham, music has remained a constant alongside my research. During my PhD I co-founded and co-directed a choir at ESO, bringing together members of all singing abilities. Our inaugural concert featured music as varied as music from Lord of the Rings, a Purcell opera movement, and a traditional South African folk song. Since moving to New York, I sing bass with the [Greenwich Village Chamber Singers](https://gvcsnyc.org/), with whom I recently performed in a sold-out concert of Bach's St Matthew Passion.
 
-Paragraph 2:
-> During my PhD at ESO I chaired the Student Representative Committee, advocating for student welfare during the cost-of-living crisis, organising mental health awareness events, and communicating student concerns to the Office for Science.
+---
+
+### Block 3 — Hiking
+
+**Section heading:** Hiking
+
+**Layout:** Two columns — image left (~38% width), text right. Image may be cropped to fit. Caption below image.
+
+- Left: `PLACEHOLDER: images/interests_hiking.jpg` with caption `<!-- REVIEW: add caption text -->`
+
+**Text:**
+
+> After a long week of science, there's nothing better than a fresh lungful of air in the mountains. When I lived in Munich, I frequently organised "beginner-achievable" hiking trips for the other students (enjoyable even when they tipped into [Type II fun](https://weareexplorers.co/type-2-fun-guide-fun-scale/)!) Now I'm in New York, I can hop on a train up the Hudson Valley to hike in the Catskills or visit cute upstate towns (where I tried Root Beer for the first time!).
+
+---
+
+### Block 4 — Reading
+
+**Section heading:** Reading
+
+**Layout:** Text full width, then book carousel below at ~90% page width, centred.
+
+**Text:**
+
+> I enjoy reading, and have spent the last few years participating in a reading challenge with friends, aiming to read 15 books a year across a wide range of genres and authors. My favourites tend to cluster around science fiction, historical fiction, and non-fiction history and politics, although I've enjoyed exploring new genres I hadn't read before. I'm always open to new book recommendations!
+
+**Carousel spec:**
+- Display 8 book covers at a time in a 2-row grid of 4 columns, advancing 8 books at a time
+- Book images live in `images/books/` named `book_1.jpg`, `book_2.jpg` etc. — display in ascending numerical order
+- Use 8 placeholder slots if the actual images are not yet present: `PLACEHOLDER: images/books/book_1.jpg` through `PLACEHOLDER: images/books/book_8.jpg`
+- All covers cropped to a consistent vertical 4:3 aspect ratio (`object-fit: cover`) so they align uniformly — most source images are already 4:3 but crop as needed
+- Book title as a caption beneath each cover, `<!-- REVIEW: add book title -->`
+- Left and right arrow buttons on the edges to advance/retreat one book at a time
+- Arrows should wrap around (last book cycles back to first)
+- No autoplay — user-controlled only
+- On hover: book cover scales up slightly (e.g. `transform: scale(1.05)`) with a smooth transition, consistent with the zoom effect used on image links on the homepage
+- On click: book cover opens in a lightbox-style overlay — a darkened background with the image displayed larger and centred. Clicking anywhere outside the image or on a close button dismisses the overlay
+- Carousel and lightbox implemented in vanilla JS, no external libraries
 
 ---
 
 ## Files to create / modify
 | File | Action |
 |------|--------|
-| `outreach.html` | Replace stub content with sections above |
+| `interests.html` | Replace stub content with sections above |
 | `images/` | Do not add — use clearly labelled SVG placeholders per CLAUDE.md |
 
 ## Do not touch
 - `index.html`
 - `cv_publications.html`
 - `research.html`
+- `outreach.html`
 - `assets/`
 
 ## Definition of done
 - Page renders correctly when opened locally in a browser
-- All placeholders clearly labelled with correct filenames and obvious visually
+- Carousel navigates correctly with arrow buttons, wraps around, no autoplay
+- All placeholders clearly labelled with correct filenames
 - All links open in a new tab and use the site's orange accent colour
 - Header/nav/footer/contact block matches the rest of the site
-- Changes staged and committed with message: `Build out Outreach & Community page`
-- Do not push
+- Changes staged and committed with message: `Build out Personal Interests page`
+- Do not push 
