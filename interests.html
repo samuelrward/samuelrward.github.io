@@ -128,7 +128,7 @@
 
                 <!-- Book carousel -->
                 <div id="book-carousel" style="position:relative; width:90%; margin:1.2em auto 0;">
-                    <div id="carousel-track" style="display:grid; grid-template-columns:repeat(4,1fr); gap:1em;">
+                    <div id="carousel-track" style="display:grid; grid-template-columns:repeat(4,1fr); gap:0.4em;">
                     </div>
                     <!-- Arrows -->
                     <button id="carousel-prev" aria-label="Previous" style="position:absolute; top:45%; left:-2em; transform:translateY(-50%); background:none; border:none; font-size:2em; color:#555; cursor:pointer;">&#8249;</button>
@@ -155,7 +155,7 @@
                         transition: transform 0.2s ease;
                     }
                     .book-cover-wrap:hover img {
-                        transform: scale(1.05);
+                        transform: scale(1.1);
                     }
                 </style>
 
@@ -193,33 +193,34 @@
                         'images/books/book_991.jpg'
                     ];
 
-                    var PER_PAGE = 8;
-                    var page = 0;
-                    var totalPages = Math.ceil(books.length / PER_PAGE);
+                    var VISIBLE = 8;
+                    var offset = 0;
+                    var total = books.length;
                     var track = document.getElementById('carousel-track');
 
                     function render() {
                         track.innerHTML = '';
-                        var start = page * PER_PAGE;
-                        var slice = books.slice(start, start + PER_PAGE);
-                        slice.forEach(function(src) {
+                        for (var i = 0; i < VISIBLE; i++) {
+                            var src = books[(offset + i) % total];
                             var wrap = document.createElement('div');
                             wrap.className = 'book-cover-wrap';
                             var img = document.createElement('img');
                             img.src = src;
                             img.alt = '';
                             wrap.appendChild(img);
-                            wrap.addEventListener('click', function() { openLightbox(src); });
+                            wrap.addEventListener('click', (function(s) {
+                                return function() { openLightbox(s); };
+                            })(src));
                             track.appendChild(wrap);
-                        });
+                        }
                     }
 
                     document.getElementById('carousel-prev').addEventListener('click', function() {
-                        page = (page - 1 + totalPages) % totalPages;
+                        offset = (offset - 1 + total) % total;
                         render();
                     });
                     document.getElementById('carousel-next').addEventListener('click', function() {
-                        page = (page + 1) % totalPages;
+                        offset = (offset + 1) % total;
                         render();
                     });
 
