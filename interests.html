@@ -124,98 +124,123 @@
             <!-- Block 4: Reading -->
             <section id="reading">
                 <h3>Reading</h3>
-                <p>Outside of scientific papers, I am an avid reader and have spent the last few years participating in a reading challenge with friends — aiming to read 15 books a year across a deliberately wide range of genres and authors. My favourites tend to cluster around science fiction, historical fiction, and non-fiction history and politics, though the challenge has pushed me well beyond my comfort zone.</p>
+                <p>I enjoy reading, and have spent the last few years participating in a reading challenge with friends - aiming to read 15 books a year across a wide range of genres and authors. My favourites tend to cluster around science fiction, historical fiction, and non-fiction history and politics, although I've enjoyed exploring new genres I hadn't read before.</p>
 
                 <!-- Book carousel -->
                 <div id="book-carousel" style="position:relative; width:90%; margin:1.2em auto 0;">
-                    <div id="carousel-track" style="display:flex; gap:1em; overflow:hidden;">
-                        <!-- 8 book slots -->
-                        <div class="book-slot" style="flex:0 0 calc(25% - 0.75em);">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 400" style="width:100%; display:block; object-fit:cover;">
-                                <rect width="300" height="400" fill="#cccccc"/>
-                                <text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" font-family="sans-serif" font-size="13" fill="#666">PLACEHOLDER: images/book_1.jpg</text>
-                            </svg>
-                            <p style="font-size:0.8em; color:#555; margin-top:0.3em; text-align:center;"><!-- REVIEW: add book title --></p>
-                        </div>
-                        <div class="book-slot" style="flex:0 0 calc(25% - 0.75em);">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 400" style="width:100%; display:block;">
-                                <rect width="300" height="400" fill="#cccccc"/>
-                                <text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" font-family="sans-serif" font-size="13" fill="#666">PLACEHOLDER: images/book_2.jpg</text>
-                            </svg>
-                            <p style="font-size:0.8em; color:#555; margin-top:0.3em; text-align:center;"><!-- REVIEW: add book title --></p>
-                        </div>
-                        <div class="book-slot" style="flex:0 0 calc(25% - 0.75em);">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 400" style="width:100%; display:block;">
-                                <rect width="300" height="400" fill="#cccccc"/>
-                                <text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" font-family="sans-serif" font-size="13" fill="#666">PLACEHOLDER: images/book_3.jpg</text>
-                            </svg>
-                            <p style="font-size:0.8em; color:#555; margin-top:0.3em; text-align:center;"><!-- REVIEW: add book title --></p>
-                        </div>
-                        <div class="book-slot" style="flex:0 0 calc(25% - 0.75em);">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 400" style="width:100%; display:block;">
-                                <rect width="300" height="400" fill="#cccccc"/>
-                                <text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" font-family="sans-serif" font-size="13" fill="#666">PLACEHOLDER: images/book_4.jpg</text>
-                            </svg>
-                            <p style="font-size:0.8em; color:#555; margin-top:0.3em; text-align:center;"><!-- REVIEW: add book title --></p>
-                        </div>
-                        <div class="book-slot" style="flex:0 0 calc(25% - 0.75em);">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 400" style="width:100%; display:block;">
-                                <rect width="300" height="400" fill="#cccccc"/>
-                                <text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" font-family="sans-serif" font-size="13" fill="#666">PLACEHOLDER: images/book_5.jpg</text>
-                            </svg>
-                            <p style="font-size:0.8em; color:#555; margin-top:0.3em; text-align:center;"><!-- REVIEW: add book title --></p>
-                        </div>
-                        <div class="book-slot" style="flex:0 0 calc(25% - 0.75em);">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 400" style="width:100%; display:block;">
-                                <rect width="300" height="400" fill="#cccccc"/>
-                                <text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" font-family="sans-serif" font-size="13" fill="#666">PLACEHOLDER: images/book_6.jpg</text>
-                            </svg>
-                            <p style="font-size:0.8em; color:#555; margin-top:0.3em; text-align:center;"><!-- REVIEW: add book title --></p>
-                        </div>
-                        <div class="book-slot" style="flex:0 0 calc(25% - 0.75em);">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 400" style="width:100%; display:block;">
-                                <rect width="300" height="400" fill="#cccccc"/>
-                                <text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" font-family="sans-serif" font-size="13" fill="#666">PLACEHOLDER: images/book_7.jpg</text>
-                            </svg>
-                            <p style="font-size:0.8em; color:#555; margin-top:0.3em; text-align:center;"><!-- REVIEW: add book title --></p>
-                        </div>
-                        <div class="book-slot" style="flex:0 0 calc(25% - 0.75em);">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 400" style="width:100%; display:block;">
-                                <rect width="300" height="400" fill="#cccccc"/>
-                                <text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" font-family="sans-serif" font-size="13" fill="#666">PLACEHOLDER: images/book_8.jpg</text>
-                            </svg>
-                            <p style="font-size:0.8em; color:#555; margin-top:0.3em; text-align:center;"><!-- REVIEW: add book title --></p>
-                        </div>
+                    <div id="carousel-track" style="display:grid; grid-template-columns:repeat(4,1fr); gap:1em;">
                     </div>
                     <!-- Arrows -->
-                    <button id="carousel-prev" aria-label="Previous" style="position:absolute; top:40%; left:-2em; transform:translateY(-50%); background:none; border:none; font-size:1.8em; color:#555; cursor:pointer;">&#8249;</button>
-                    <button id="carousel-next" aria-label="Next" style="position:absolute; top:40%; right:-2em; transform:translateY(-50%); background:none; border:none; font-size:1.8em; color:#555; cursor:pointer;">&#8250;</button>
+                    <button id="carousel-prev" aria-label="Previous" style="position:absolute; top:45%; left:-2em; transform:translateY(-50%); background:none; border:none; font-size:2em; color:#555; cursor:pointer;">&#8249;</button>
+                    <button id="carousel-next" aria-label="Next" style="position:absolute; top:45%; right:-2em; transform:translateY(-50%); background:none; border:none; font-size:2em; color:#555; cursor:pointer;">&#8250;</button>
                 </div>
+
+                <!-- Lightbox overlay -->
+                <div id="book-lightbox" style="display:none; position:fixed; inset:0; background:rgba(0,0,0,0.82); z-index:9999; align-items:center; justify-content:center;">
+                    <img id="lightbox-img" src="" alt="" style="max-height:88vh; max-width:80vw; object-fit:contain; box-shadow:0 4px 32px rgba(0,0,0,0.6);" />
+                    <button id="lightbox-close" aria-label="Close" style="position:fixed; top:1.2em; right:1.5em; background:none; border:none; font-size:2.2em; color:#fff; cursor:pointer; line-height:1;">&#215;</button>
+                </div>
+
+                <style>
+                    .book-cover-wrap {
+                        overflow: hidden;
+                        aspect-ratio: 3 / 4;
+                        cursor: pointer;
+                    }
+                    .book-cover-wrap img {
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                        display: block;
+                        transition: transform 0.2s ease;
+                    }
+                    .book-cover-wrap:hover img {
+                        transform: scale(1.05);
+                    }
+                </style>
 
                 <script>
                 (function() {
-                    var slots = document.querySelectorAll('#book-carousel .book-slot');
-                    var total = slots.length;
-                    var visible = 4;
-                    var current = 0;
+                    var books = [
+                        'images/books/book_001.jpg',
+                        'images/books/book_002.jpg',
+                        'images/books/book_003.jpg',
+                        'images/books/book_004.jpeg',
+                        'images/books/book_005.jpg',
+                        'images/books/book_006.jpg',
+                        'images/books/book_007.jpg',
+                        'images/books/book_008.jpg',
+                        'images/books/book_009.jpg',
+                        'images/books/book_010.jpg',
+                        'images/books/book_900.jpg',
+                        'images/books/book_913.jpg',
+                        'images/books/book_914.jpg',
+                        'images/books/book_923.jpg',
+                        'images/books/book_932.jpg',
+                        'images/books/book_933.jpeg',
+                        'images/books/book_943.jpeg',
+                        'images/books/book_944.jpg',
+                        'images/books/book_945.jpeg',
+                        'images/books/book_953.jpeg',
+                        'images/books/book_957.jpg',
+                        'images/books/book_959.jpg',
+                        'images/books/book_971.jpg',
+                        'images/books/book_973.jpg',
+                        'images/books/book_974.jpg',
+                        'images/books/book_977.jpg',
+                        'images/books/book_980.jpg',
+                        'images/books/book_990.jpg',
+                        'images/books/book_991.jpg'
+                    ];
 
-                    function update() {
-                        slots.forEach(function(slot, i) {
-                            var pos = (i - current + total) % total;
-                            slot.style.display = pos < visible ? '' : 'none';
+                    var PER_PAGE = 8;
+                    var page = 0;
+                    var totalPages = Math.ceil(books.length / PER_PAGE);
+                    var track = document.getElementById('carousel-track');
+
+                    function render() {
+                        track.innerHTML = '';
+                        var start = page * PER_PAGE;
+                        var slice = books.slice(start, start + PER_PAGE);
+                        slice.forEach(function(src) {
+                            var wrap = document.createElement('div');
+                            wrap.className = 'book-cover-wrap';
+                            var img = document.createElement('img');
+                            img.src = src;
+                            img.alt = '';
+                            wrap.appendChild(img);
+                            wrap.addEventListener('click', function() { openLightbox(src); });
+                            track.appendChild(wrap);
                         });
                     }
 
                     document.getElementById('carousel-prev').addEventListener('click', function() {
-                        current = (current - 1 + total) % total;
-                        update();
+                        page = (page - 1 + totalPages) % totalPages;
+                        render();
                     });
                     document.getElementById('carousel-next').addEventListener('click', function() {
-                        current = (current + 1) % total;
-                        update();
+                        page = (page + 1) % totalPages;
+                        render();
                     });
 
-                    update();
+                    // Lightbox
+                    var lightbox = document.getElementById('book-lightbox');
+                    var lightboxImg = document.getElementById('lightbox-img');
+
+                    function openLightbox(src) {
+                        lightboxImg.src = src;
+                        lightbox.style.display = 'flex';
+                    }
+                    function closeLightbox() {
+                        lightbox.style.display = 'none';
+                        lightboxImg.src = '';
+                    }
+                    document.getElementById('lightbox-close').addEventListener('click', closeLightbox);
+                    lightbox.addEventListener('click', function(e) {
+                        if (e.target === lightbox) closeLightbox();
+                    });
+
+                    render();
                 })();
                 </script>
             </section>
